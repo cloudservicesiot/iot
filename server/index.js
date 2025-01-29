@@ -29,7 +29,7 @@ app.use("/ac", AirconditionerRoutes)
 
 
 // Start server
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 const dbConnectionString = mongodb_Url;
 
 const start = async () => {

@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 import { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
@@ -154,23 +147,23 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-            <Item title="User Login"
+            {/* <Item title="User Login"
               to="/user/login"
               icon={<LoginIcon/>}
               selected={selected}
-              setSelected={setSelected}/>
+              setSelected={setSelected}/> */}
 
         
             <Item
               title="All Devices"
-              to="/contacts"
+              to="/devices"
               icon={<ListAltIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Floor Plans"
-              to="/floorplan"
+              to="/3-d/floorplan"
               icon={<ViewInArIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -182,7 +175,7 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             /> */}
- <Typography
+            <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
@@ -191,7 +184,7 @@ const Sidebar = () => {
             </Typography>
             <Item
               title="Entity Switch"
-              to="/mainswitch"
+              to="/"
               icon={<OnDeviceTrainingIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -201,7 +194,7 @@ const Sidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Pages
+              Forms
             </Typography>
             <Item
               title="Add Device"
@@ -232,12 +225,12 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
+<Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Charts
+              Energy Dashboard
             </Typography>
             <Item
               title="Energy Meters"
@@ -246,6 +239,14 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Air Conditioner
+            </Typography>
             <Item
               title="AC Dashboard"
               to="/ac/dashboard"
@@ -260,13 +261,13 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-            <Item
+            {/* <Item
               title="Geography Chart"
               to="/user/register"
               icon={<MapOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
           </Box>
         </Menu>
       </ProSidebar>

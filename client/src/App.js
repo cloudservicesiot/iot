@@ -70,7 +70,7 @@ import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Team from "./scenes/team";
 import Invoices from "./scenes/invoices";
-import Contacts from "./scenes/contacts";
+import Contacts from "./scenes/allDevices/DeviceswithEntities";
 import Form from "./scenes/form";
 import FAQ from "./scenes/faq";
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -90,6 +90,7 @@ import EnergyMeters from "./components/energy/EnergyMeter";
 import AirConditionerForm from "./components/airConditioner/AcForm";
 import AllAirConditioner from "./components/airConditioner/AirConditioner";
 import AcControlls from "./components/airConditioner/AcControlls";
+import DevicesAndEntities from "./scenes/allDevices/DeviceswithEntities";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -131,12 +132,44 @@ function App() {
                     }
                   />
                   <Route
+                  path="/faq"
+                  element={
+                    <PrivateRoute>
+                      <FAQ />
+                    </PrivateRoute>
+                  }
+                  />
+                  <Route
+                  path="devices"
+                  element={
+                    <PrivateRoute>
+                      <DevicesAndEntities/>
+                    </PrivateRoute>
+                  }
+                  />
+                  <Route
                     path="/team"
                     element={
                       <PrivateRoute>
                         <Team />
                       </PrivateRoute>
                     }
+                  />
+                  <Route
+                  path="codeeditor"
+                  element={
+                    <PrivateRoute>
+                      <CodeEditor/>
+                    </PrivateRoute>
+                  }
+                  />
+                  <Route
+                  path="/3-d/floorplan"
+                  element={
+                    <PrivateRoute>
+                      <FloorPlan/>
+                    </PrivateRoute>
+                  }
                   />
                   <Route
                     path="/form"

@@ -25,11 +25,11 @@ const Team = () => {
       headerAlign: "left",
       align: "left",
     },
-    {
-      field: "phone",
-      headerName: "Phone Number",
-      flex: 1,
-    },
+    // {
+    //   field: "phone",
+    //   headerName: "Phone Number",
+    //   flex: 1,
+    // },
     {
       field: "email",
       headerName: "Email",

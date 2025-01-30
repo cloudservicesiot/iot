@@ -18,7 +18,6 @@ import {
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import AirConditioner from "../airConditioner/AcForm"
-// You can replace this with your actual API endpoint
 const ApiUrl = process.env.REACT_APP_API_URL;
 
 const EnergyMeters = () => {
@@ -91,7 +90,7 @@ const EnergyMeters = () => {
           <Box display="flex" alignItems="center">
             <MeterIcon sx={{ fontSize: 40, mr: 2 }} />
             <Typography variant="h5">
-              Total Energy Consumption: {getTotalEnergy()} kWh
+              Total Energy Consumption: {getTotalEnergy()} Wh
             </Typography>
           </Box>
         </CardContent>

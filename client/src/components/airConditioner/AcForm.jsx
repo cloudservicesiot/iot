@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { TextField, Button, Box, Dialog, DialogActions, DialogContent, DialogTitle, Fab } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import axios from "axios";
-
+const ApiUrl= process.env.REACT_APP_API_URL;
 const AddAirConditionerForm = () => {
   const [devicename, setDevicename] = useState("");
   const [deviceID, setDeviceID] = useState("");
@@ -14,7 +14,7 @@ const AddAirConditionerForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/ac/addnew", {
+      const response = await axios.post(`${ApiUrl}/ac/addnew`, {
         devicename,
         deviceID,
       });

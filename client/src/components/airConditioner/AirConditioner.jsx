@@ -5,7 +5,7 @@ import PowerIcon from "@mui/icons-material/Power"; // On/Off icon
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import { useNavigate } from "react-router-dom"; // Correct import
 import AddAirConditionerForm from "./AcForm";
-
+const ApiUrl= process.env.REACT_APP_API_URL;
 const AllAirConditioner = () => {
   const [devices, setDevices] = useState([]);
   const [error, setError] = useState("");
@@ -15,7 +15,7 @@ const AllAirConditioner = () => {
   useEffect(() => {
     const fetchDevices = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/ac/get/allac");
+        const response = await axios.get(`${ApiUrl}/ac/get/allac`);
         setDevices(response.data.data);
       } catch (err) {
         setError("Error fetching devices");
